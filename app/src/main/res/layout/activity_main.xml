@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputNome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="21dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/inputTelefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/optionConta"
+        app:layout_constraintEnd_toEndOf="@+id/optionConta"
+        app:layout_constraintStart_toStartOf="@+id/inputNome"
+        app:layout_constraintTop_toBottomOf="@+id/inputTelefone" />
+
+    <EditText
+        android:id="@+id/inputTelefone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/inputNome" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="36dp"
+        android:text="Contato Telefone"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBoxEmail"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/checkBoxEmail" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="28dp"
+        android:text="Contato E-mail"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxTel"
+        app:layout_constraintTop_toBottomOf="@+id/labelPrefCont" />
+
+    <Spinner
+        android:id="@+id/optionConta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/labelPrefCont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="228dp"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxEmail" />
+
+    <TextView
+        android:id="@+id/labelPrefCont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="Prefências de Contato"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxEmail"
+        app:layout_constraintStart_toStartOf="@+id/optionConta"
+        app:layout_constraintTop_toBottomOf="@+id/optionConta" />
+</androidx.constraintlayout.widget.ConstraintLayout>
